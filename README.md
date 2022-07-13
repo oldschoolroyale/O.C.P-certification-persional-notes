@@ -25,6 +25,7 @@ Java OOA, Inner and final classes -
 ![image](https://user-images.githubusercontent.com/38427828/178449064-df758591-62f9-4b8f-9f4a-aee3e704b930.png)
 1. Here we can call new TestOuter.TestInner() which creates us an instance of TestInner object;
 2. An instance of the nested class can be created from a class of package mypack using: new TestInner()
+3. Garbage collector collects only instance of class, not static variables.
 
 Java OOP -
 1. Encapsulation must provide private (in case of immutablity should be final) fields and public accessors in several scenarious. 
