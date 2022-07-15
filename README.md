@@ -1,6 +1,7 @@
 # Oracle certified professional exam preparation personal notes
 - Author: Rakhimjonov Shokhsulton
 ## Collections
+###### General
 - Adding into list should be sequential. IndexOutOfBoundException occurs while trying to add element one step ahead size of list
 - ```Object.clone()``` clones array, but objects will point to same object. For example **array1 == array2** *false*, **array1[0] == array2[0]** *true*
 ###### Immutable collections
@@ -16,6 +17,9 @@
 - Comparator used to sort method of Arrays - ```Arrays.sort``` has one functional method ```compare(T t, T t)``` returns **int**
 
 ## Java data types 
+###### General
+- Method length() of String object is final
+- Object wrapper classes ```java.lang.Boolean, java.lang.Integer, java.lang.Long, java.lang.Short etc```, also ```String, StringBuilder``` are final 
 - Operator == goes first, and then = 
 - ```isBlank()``` returns true if the string is empty or contains only white space codepoints, otherwise false. 
 isEmpty returns true if, and only if, ```length()``` is 0
@@ -28,11 +32,14 @@ isEmpty returns true if, and only if, ```length()``` is 0
 ## Functional interfaces and lambdas
 - Lambda expression can use local variable if that variable is final or effictively final.
 
-## Java OOA, Inner and final classes
+## Java OOA
 ###### General
 - Garbage collector collects only instance of class, not static variables.
 - When a programmer does not define **ANY** constructor, the compiler inserts one automatically, the access modifier of which is same as that of the class.
-###### Real life scenario
+
+###### Overloading
+You cannot have more than one method in a class with the same signature. Method signature includes method name and the argument list but does not include return type.
+###### Inner and final classes
 ![image](https://user-images.githubusercontent.com/38427828/178449064-df758591-62f9-4b8f-9f4a-aee3e704b930.png)
 > Here we can call new TestOuter.TestInner() which creates us an instance of TestInner object;
 > An instance of the nested class can be created from a class of package mypack using: new TestInner()
