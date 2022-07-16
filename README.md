@@ -24,10 +24,12 @@
 - ```isBlank()``` returns true if the string is empty or contains only white space codepoints, otherwise false. 
 isEmpty returns true if, and only if, ```length()``` is 0
 - final variable must initialize while constructor is only one or in static init or itself respectively
+- equals() method compares object ignoring refference of objects
 
 ## Controlling program flow - if,else,switch
 ###### General
 - Switch can work with ```int short byte char String```
+- Unreachable code will not compile. Example: ```while(false){x = 3;}```
 
 ## Functional interfaces and lambdas
 - Lambda expression can use local variable if that variable is final or effictively final.
@@ -55,6 +57,9 @@ Exception handling
 - ```FileWriter("text.txt")``` will throw exception, if text.txt does not exist in filesystem.
 - ```Files.line(Path p)``` also ```Files.line(Path p, Charset c)``` returns **Stream of Strings**
 - ```Files.readAllLines(Paths.get(INPUT_FILE))``` returns **List of Strings**
+- ```BufferedReader(new FileReader("c:\\temp\\test.txt")).lines()``` returns Stream of Strings
+- ``` write(int b)``` method of various streams based classes such as FileOutputStream take an int parameter but write only the low 8 bits (i.e. 1 byte) of that integer, e.g a file of size 1 byte will be created.
+- **PrintWriter's write method** writes a single character to the file. The size in bytes of a character depends on the default character encoding of the underlying platform. For example, if the encoding is UTF-8, only 1 byte will be written and the size of the file will be 1 byte.
 
 ## Optionals 
 - ofNullable() returns empty Optional
