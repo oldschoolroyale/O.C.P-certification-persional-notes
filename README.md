@@ -90,6 +90,7 @@ Exception handling
 ###### Short circuit
 - groupingBy method returns Map<Object, Object>
 - collect(Collectors.**joining**) will return String, which combine each String element of Iterable
+- collect(Collectors.**toList()**) will return List
 ###### Terminal operations 
 - Terminal operations returns void and next methods called after will provide compilation error
 
