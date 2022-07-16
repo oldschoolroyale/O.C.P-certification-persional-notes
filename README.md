@@ -4,6 +4,8 @@
 ###### General
 - Adding into list should be sequential. IndexOutOfBoundException occurs while trying to add element one step ahead size of list
 - ```Object.clone()``` clones array, but objects will point to same object. For example **array1 == array2** *false*, **array1[0] == array2[0]** *true*
+###### ArrayList
+- ArrayList does support nulls. You can add and remove nulls to/from an ArrayList. Therefore, in the given code, a NullPointerException will not be thrown. The print statement will simply print the contents of the list.
 ###### Immutable collections
 - Immutable collections does not support any changes after creation. UnsoppertedException will be thrown while trying of editing it.
 - ```List.of()``` and ```List.copyOf()``` creates immutable collections.
@@ -97,6 +99,7 @@ Exception handling
 ## Modules
 - jmod tool to create JMOD files and list the content of existing JMOD files. functions -> create|extract|list|describe|hash
 - jdeps --list-deps moduleA.jar -> it will list all the modules on which moduleA depends. It will show an error if moduleA requires any other application module. 
+- Two classes -  **com.abc.payroll.Hourly** and **com.abc.payroll.Yearly** module abc.payroll{   exports com.abc.payroll; }  Since both the classes belong to com.abc.payroll package, exporting this package is the only option.
 
 ## Java functional interfaces and its methods
 - BiConsumer<T, U> - accept(T t, U u)
